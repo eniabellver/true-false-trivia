@@ -47,9 +47,8 @@ let questions = [
 ];
 
 function handleCategoryChange() {
-  // TODO: save the 'category-dropdown' value to quizConfig
-  
-  console.log('Category changed');
+  const category = document.getElementById('category-dropdown').value;
+  quizConfig.category = category;
 }
 
 function handleDifficultyChange() {
