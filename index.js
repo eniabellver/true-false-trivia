@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 
   const difficultyDropdown = document.getElementById('difficulty-dropdown');
   difficultyDropdown.addEventListener('change', () => {
-    handleDifficultyChange();
+    handleDifficultyChange(this.value);
   });
 
   const startQuizButton = document.getElementById('start-quiz-button');
@@ -52,9 +52,10 @@ function handleCategoryChange() {
 }
 
 function handleDifficultyChange() {
-  // TODO: save the 'difficulty-dropdown' value to quizConfig
+  const difficulty = document.getElementById('difficulty-dropdown').value;
+  quizConfig.difficulty = difficulty;
 
-  console.log('Difficulty changed');
+  console.log('Difficulty changed'+ difficulty) ;
 }
 
 
