@@ -54,6 +54,7 @@ function handleCategoryChange() {
 
 function handleDifficultyChange() {
   const difficulty = document.getElementById('difficulty-dropdown').value;
+  quizConfig.difficulty = difficulty;
 
   console.log('Difficulty changed'+ difficulty) ;
 }
