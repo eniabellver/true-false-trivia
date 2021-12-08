@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>True & False Trivia</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+        <h1>True & False Trivia</h1>
+    </header>
+​       
+    <div class="setup-container">
+    <h2>Choose category</h2>
+    <select id="category-dropdown">
+      <option value="0" selected disabled>Select category</option>
+      <option value="11">Entertainment: Film</option>
+      <option value="15">Entertainment: Video Games</option>
+      <option value="18">Science: Computers</option>
+      <option value="22">Geography</option>
+      <option value="25">Arts</option>
+      <option value="27">Animals</option>
+    </select>
+​
+    <h2>Choose difficulty</h2>
+    <select id="difficulty-dropdown">
+      <option value="0" selected disabled>Select difficulty</option>
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+​
+    <div class="action-container">
+      <button id="start-quiz-button">Start quiz</button>
+    </div>
+    </div>
+​
+    <div id="questions-container">
+      <h2>Questions</h2>
+​
+      <div id="quetsion-1" class="question-container">
+        <p>Leonardo DiCaprio won an Oscar for Best Actor in 2004&#039;s &quot;The Aviator&quot;.</p>
+​
+        <input type="radio" id="true" name="question-1" value="True" />
+        <label for="true">True</label>
+        <input type="radio" id="false" name="question-1" value="False" />
+        <label for="false">False</label>
+      </div>
+​
+      <div id="quetsion-2" class="question-container">
+        <p>Matt Damon played an astronaut stranded on an extraterrestrial planet in both of the movies Interstellar and The Martian.</p>
+        
+        <input type="radio" id="true" name="question-2" value="True" />
+        <label for="true">True</label>
+        <input type="radio" id="false" name="question-2" value="False" />
+        <label for="false">False</label>
+      </div>
+​
+      <div id="quetsion-3" class="question-container">
+        <p>The 2010 film &quot;The Social Network&quot; is a biographical drama film about MySpace founder Tom Anderson.</p>
+        
+        <input type="radio" id="true" name="question-3" value="True" />
+        <label for="true">True</label>
+        <input type="radio" id="false" name="question-3" value="False" />
+        <label for="false">False</label>
+      </div>
+    </div>
+​
+    <div class="action-container">
+      <button id="submit-answers-button">Submit answers</button>
+    </div>
+​
+    <div id="results-container">
+      <h2>Your results</h2>
+      
+      <p> Congratulations your score is <span id="score">30</span>! </p>
+    </div>
+  </body>
+</html>
