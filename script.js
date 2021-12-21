@@ -98,7 +98,7 @@ async function startQuiz() {
   if (!isQuizConfigValid) {
     
     // we do not want to execute the rest of the function
-    // until the unser set up the quiz config properly
+    // until the user set up the quiz config properly
     return;
   }
 
