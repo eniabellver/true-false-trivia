@@ -38,7 +38,7 @@ let questions = [
   },
   {
     question: 'Matt Damon played an astronaut stranded on an extraterrestrial planet in both of the movies Interstellar and The Martian.',
-    correctAnswer: 'True',
+    correctAnswer: 'False',
   },
   {
     question: 'The 2010 film &quot;The Social Network&quot; is a biographical drama film about MySpace founder Tom Anderson.',
@@ -60,10 +60,16 @@ function handleDifficultyChange() {
 // Questions
 
 async function fetchQuestions() {
-  // TODO: Build up URI and return the list of questions at the end of the function
+  const { amount, category, difficulty, type, encoding } = quizConfig;
+  const uri = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=${type}&encoding=${encoding}`;
   
-  const uri = `https://opentdb.com/api.php`;
   const response = await fetch(uri);
+  const data = await response.json();
+
+  return data.results.map(result => ({
+    question: result.question,
+    correctAnswer: result.correct_answer,
+  }));
 }
 
 function displayQuestions() {
@@ -71,10 +77,34 @@ function displayQuestions() {
 
 }
 
-function startQuiz() {
-  // TODO: fetch questions, save them to 'questions' and display the questions
 
-  console.log('Start quiz button was pressed');
+
+async function startQuiz() {
+  // TODO: save them to 'questions' and display the questions
+
+  let isQuizConfigValid = true;
+  if (quizConfig.category === undefined) {
+    const categoryDropdownErrorMessage = document.querySelector('#category-dropdown-error');
+    categoryDropdownErrorMessage.style.display = 'block';
+    isQuizConfigValid = false;
+  }
+
+  if (quizConfig.difficulty === undefined) {
+    const difficultyDropdownErrorMessage = document.querySelector('#difficulty-dropdown-error');
+    difficultyDropdownErrorMessage.style.display = 'block';
+    isQuizConfigValid = false;
+  }
+
+  if (!isQuizConfigValid) {
+    
+    // we do not want to execute the rest of the function
+    // until the unser set up the quiz config properly
+    return;
+  }
+
+  const results = await fetchQuestions();
+
+  console.log('The following questions have been fetched: ', results);
 }
 
 

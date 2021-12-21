@@ -13,28 +13,34 @@
     </header>
 ​       
     <div class="setup-container">
-    <h2>Choose category</h2>
-    <select id="category-dropdown">
-      <option value="0" selected disabled>Select category</option>
-      <option value="11">Entertainment: Film</option>
-      <option value="15">Entertainment: Video Games</option>
-      <option value="18">Science: Computers</option>
-      <option value="22">Geography</option>
-      <option value="25">Arts</option>
-      <option value="27">Animals</option>
-    </select>
+      <h2>Choose category</h2>
+      <select id="category-dropdown">
+        <option value="0" selected disabled>Select category</option>
+        <option value="11">Entertainment: Film</option>
+        <option value="15">Entertainment: Video Games</option>
+        <option value="18">Science: Computers</option>
+        <option value="22">Geography</option>
+        <option value="25">Arts</option>
+        <option value="27">Animals</option>
+      </select>
+      <div id="category-dropdown-error" class="error-message" style="display: none;">
+        Select a category
+      </div>
 ​
-    <h2>Choose difficulty</h2>
-    <select id="difficulty-dropdown">
-      <option value="0" selected disabled>Select difficulty</option>
-      <option value="easy">Easy</option>
-      <option value="medium">Medium</option>
-      <option value="hard">Hard</option>
-    </select>
+      <h2>Choose difficulty</h2>
+      <select id="difficulty-dropdown">
+        <option value="0" selected disabled>Select difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <div id="difficulty-dropdown-error" class="error-message" style="display: none;">
+        Select a difficulty
+      </div>
 ​
-    <div class="action-container">
-      <button id="start-quiz-button">Start quiz</button>
-    </div>
+      <div class="action-container">
+        <button id="start-quiz-button">Start quiz</button>
+      </div>
     </div>
 ​
     <div id="questions-container">
