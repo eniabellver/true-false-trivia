@@ -78,9 +78,13 @@ function displayQuestions() {
 }
 
 
+function validateQuizConfig() {
 
-async function startQuiz() {
-  // TODO: save them to 'questions' and display the questions
+  // Reseting the error messages  
+  const errorMessages = document.querySelectorAll('.error-message');
+  errorMessages.forEach((errorMessage) => {
+    errorMessage.style.display = 'none';
+  });
 
   let isQuizConfigValid = true;
   if (quizConfig.category === undefined) {
@@ -94,6 +98,14 @@ async function startQuiz() {
     difficultyDropdownErrorMessage.style.display = 'block';
     isQuizConfigValid = false;
   }
+
+  return isQuizConfigValid;
+}
+
+async function startQuiz() {
+  // TODO: save them to 'questions' and display the questions
+
+  const isQuizConfigValid = validateQuizConfig();
 
   if (!isQuizConfigValid) {
     
