@@ -77,6 +77,14 @@ body h2 {
     font-weight: 400;
 }
 
+.setup-container .error-message {
+    font-family: var(--main-font-fam);
+    font-size: var(--primary-font-size);
+
+    margin-top: 12px;
+    color: var(--red);
+}
+
 #start-quiz-button {
     align-self: center;
     padding: 15px;
