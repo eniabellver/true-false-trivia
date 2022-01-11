@@ -1,0 +1,20 @@
+{
+  "name": "true-false-trivia",
+  "version": "1.0.0",
+  "description": "True & False Trivia Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eniabellver/true-false-trivia.git"
+  },
+  "keywords": [],
+  "author": "Szabi & Eni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eniabellver/true-false-trivia/issues"
+  },
+  "homepage": "https://github.com/eniabellver/true-false-trivia#readme"
+}
